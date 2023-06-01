@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+           {% load static %}
+            {% block content %}
+            {% block style %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}">
+{% endblock %}
+
+
+
+    <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/activities1.jpg'%}"  class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/activities2.jpg' %}"  class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/activities3.jpg' %}"  class="d-block w-100">
+      </div>
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <h1 style="margin-top:100px" >Fitness clasess</h1>
+ <section id="classes"> 
+    <div class="classes-container">
+    <div>
+        <img src="{% static 'images/cardio.jpg' %}" >
+    </div>
+    <div>
+        <h5>Cardio</h5>
+        <p>The energetic cardio class at the gym had participants drenched in sweat as they passionately pushed their limits, their heart rates soaring with each exhilarating move.</p>
+    </div>
+  </div>
+
+  <div class="classes-container">
+    <div>
+        <img src="{% static 'images/strength.jpg' %}" >
+    </div>
+    <div>
+        <h5>Strength</h5>
+        <p>The dynamic strength class at the gym challenged participants to lift heavy weights, sculpting their muscles and building their endurance through intense resistance training.</p>
+    </div>
+  </div>
+
+  <div class="classes-container">
+    <div>
+        <img src="{% static 'images/cycling.jpg' %}" >
+    </div>
+    <div>
+        <h5>Cycling</h5>
+        <p>The high-intensity cycling class at the gym transported participants into a virtual world of scenic routes, where they pedaled furiously, their legs burning with each revolution, as they embraced the exhilarating challenge of conquering imaginary hills and sprints.</p>
+    </div>
+  </div>
+
+  <div class="classes-container">
+    <div>
+        <img src="{% static 'images/acqua.jpg' %}" >
+    </div>
+    <div>
+        <h5>Acqua</h5>
+        <p>The invigorating aqua class at the gym immersed participants in a refreshing pool, where they engaged in low-impact exercises, feeling weightless as they glided through the water, strengthening their muscles and enjoying the soothing benefits of aquatic fitness.
+        </p>
+    </div>
+  </div>
+
+  <div class="classes-container">
+    <div>
+        <img src="{% static 'images/dance.jpg' %}" >
+    </div>
+    <div>
+        <h5>Dance</h5>
+        <p>The vibrant dance class at the gym brought participants together in a rhythmic fusion of movements, as they swayed, twirled, and leaped to the pulsating beats, igniting their passion for dance and transforming the studio into a joyful celebration of self-expression.</p>
+    </div>
+  </div>
+
+  <div class="classes-container">
+    <div>
+        <img src="{% static 'images/yoga.jpg' %}" >
+    </div>
+    <div>
+        <h5>Yoga</h5>
+        <p>
+          The serene yoga class at the gym provided a sanctuary for participants to find inner peace and balance, as they gracefully flowed through poses, deepening their breath, and connecting mind, body, and soul in a harmonious union of strength, flexibility, and mindfulness.</p>
+    </div>
+  </div>
+</section>
+<h1 style="margin: 200px 0;">"Royal fit, where fitness meets community. Step in, embrace the challenge, and unlock your full potential. Together, we'll sculpt your dreams into reality."</h1>
+
+
+{% endblock %}

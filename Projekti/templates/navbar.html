@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<header>
+    <img id="lg" src="{% static 'images/logo.png' %}" alt=" ">
+    <nav>
+        <ul class="list1">
+            <li><a href="{% url 'home' %}" >Home</a> </li>
+            <li><a href="{% url 'aboutus' %}">About us</a> </li>
+            <li><a href="{% url 'activities' %}" >Activities</a></li>
+            <li><a href= "{% url 'packages' %}" >Packages</a></li>
+            <li><a href="{% url 'contact' %}">Contact us</a> </li>
+       </ul>
+</nav>
+</header>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+           {% load static %}
+            {% block content %}
+            {% block style %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}">
+{% endblock %}
+
+
+
+
+   
+    
+    <section style="margin: 0;">
+        <div id="vid">
+            {% load static %} <video src="{% static 'video/gym.mp4' %}" autoplay muted ></video> 
+         </div>
+         <div id="overlay">
+            <h1><strong>
+                Stay strong, stay helathy!</strong>
+            </h1>
+            <p>"Fitness is not a destination, it's a way of life - Join us at the Gym and make it yours!"</p>
+         </div>
+    </section>
+    
+    
+    <section id="about-section">
+        <img src="{% static 'images/logo.png' %}" alt="">
+        <h1>About us</h1>
+        <div>
+            <p>Our gym is a spacious and modern fitness facility that caters to all levels of fitness enthusiasts. As you walk through the doors, you'll be greeted by a friendly and knowledgeable staff who are dedicated to helping you achieve your fitness goals. The gym is equipped with state-of-the-art equipment, including cardio machines, weightlifting stations, and functional training equipment, to ensure that you have everything you need for a complete workout.</p>
+            <p><a href="{% url 'aboutus' %}">READ MORE</a></p>
+        </div>
+
+    </section>
+
+    <section id="quote">
+        
+        <div id="quote-div">
+            <h4>"Train Hard, Get Strong, and Transform Your Body at Our Gym!"</h4>
+        </div>
+    </section>
+
+    <h1>Blogs</h1>
+    <section id="blog-section">
+       {% for blog in blogs %}
+        <div id="blog-container">
+            
+            <div><img src="{{blog.blog_img.url}}" alt=" " width="100%" height="233.33"></div>
+            <p>{{blog.blog_date}}</p>
+            <h4>{{blog.blog_title}}</h4>
+            <p id="article-text">{{blog.blog_text}}</p>
+            <p><a href="{% url 'fullblog' blog.blog_id %}"> READ POST</a></p>
+            
+        </div>
+        {% endfor %}
+       
+    </section>
+
+    {% endblock %}
+   
+    

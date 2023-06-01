@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+           {% load static %}
+            {% block content %}
+            {% block style %}
+            <link rel="stylesheet" href="{% static 'style/home.css' %}">
+            {% endblock %}
+
+
+
+<h1>Our current packages</h1>
+ <blockquote style="font-size:18px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+       Looking for a gym package that fits your fitness needs and lifestyle? Look no further than our premium gym packages, designed to provide you with state-of-the-art equipment, personalized training, and a welcoming community of like-minded fitness enthusiasts. Join now and start your journey to a healthier, happier you!
+    </blockquote>
+   
+    <section id="packages">
+        <div class="packages-imgcontainer" >
+            <img  src="{% static  'images/yoga.jpeg' %}" >
+        </div>
+        <div class="packages-imgcontainer">
+            <img src="{% static 'images/flyer5.png' %}">
+        </div>
+        <div class="packages-imgcontainer">
+            <img src="{% static 'images/flyer1.png' %}">
+        </div>
+        <div class="packages-imgcontainer">
+            <img src="{% static 'images/flyer1.jpeg' %}">
+        </div>
+        <div class="packages-imgcontainer">
+            <img src="{% static 'images/flyer2.jpeg' %}">
+        </div>
+        <div class="packages-imgcontainer">
+            <img src="{% static 'images/zumba.jpeg' %}">
+        </div>
+    </section>
+   
+
+{% endblock %}

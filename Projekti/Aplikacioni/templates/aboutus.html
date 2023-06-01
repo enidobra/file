@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+           {% load static %}
+            {% block content %}
+            {% block style %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}">
+{% endblock %}
+
+    
+    <section id="aboutsec">
+      <div>
+        <h1>About us</h1>
+        <img src="{% static 'images/about1.webp' %}" >
+      </div>
+      <div id="flexp">
+        <div><p>
+          Welcome to our gym! We are more than just a fitness center; we are a community dedicated to helping you achieve your health and wellness goals. At our gym, we believe that fitness is not just about physical strength, but also about mental well-being and overall lifestyle improvement.</p>
+          
+         <p> Our experienced and passionate team of fitness professionals is here to guide and support you every step of the way. Whether you're a beginner or an experienced athlete, we offer a wide range of fitness programs and classes designed to challenge and motivate you. From high-intensity workouts to mindful yoga sessions, we have something for everyone.</p>
+          
+         </div>
+         <div><p> We pride ourselves on providing a clean, safe, and inclusive environment where everyone feels welcome and comfortable. Our state-of-the-art facilities feature top-of-the-line equipment, spacious workout areas, and amenities to enhance your fitness journey.</p>
+          
+         <p> Beyond the gym floor, we foster a sense of camaraderie among our members. We believe that by coming together, we can achieve more. Our gym organizes various social events, workshops, and challenges to connect our community and provide opportunities for personal growth.</p>
+          
+        </div>
+        </div>
+    </section>
+    <section>
+      <h1>Our trainers</h1>
+      <section class="hero-section">
+        <div class="card-grid">
+          <a class="card" href="#">
+            <div class="card__background" style="background-image: url(https://images.pexels.com/photos/6740056/pexels-photo-6740056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+            <div class="card__content">
+              
+              <h3 class="card__heading">EMILY JOHNSON</h3>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card__background" style="background-image: url(https://images.pexels.com/photos/7991644/pexels-photo-7991644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+            <div class="card__content">
+              
+              <h3 class="card__heading">AVA GONZALEZ</h3>
+            </div>
+          </a>
+          <a class="card" href="#">
+            <div class="card__background" style="background-image: url(https://images.pexels.com/photos/6455850/pexels-photo-6455850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+            <div class="card__content">
+              
+              <h3 class="card__heading">LIAM PATEL</h3>
+            </div>
+          </li>
+          <a class="card" href="#">
+            <div class="card__background" style="background-image: url(https://images.pexels.com/photos/6550847/pexels-photo-6550847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)"></div>
+            <div class="card__content">
+              <h3 class="card__heading">ETHAN LEE</h3>
+            </div>
+          </a>
+        <div>
+      </section>
+    </section>
+
+
+
+    <section>
+      <h1>Some reviews</h1>
+        <div id="review">
+          {% for rev in reviews %}
+            <div>
+              
+                <h3>{{rev.review_date}}</h3>
+                <p>{{rev.review_comment}}</p>
+                <p>{{rev.review_name}}</p>
+                <p>{{rev.review_review|safe}}</p>
+              
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+    
+  {% endblock %}
+  
+    

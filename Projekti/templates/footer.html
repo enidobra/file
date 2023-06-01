@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<footer>
+    <div id="footer-container" style="width:100%; align-content: center;">
+
+        <div class="footer">
+           <img src="{% static 'images/logo.png' %}" alt="" width="150px" height="150px" style="border-radius: 50%;">
+        </div>
+        <div class="footer">
+           <p>Royal Fit</p>
+           <p>+355 43 2222</p>
+           <p>fitroyale@gmail.com</p>
+        </div>
+
+        <div class="footer">
+           <p style="font-family: 'Merriweather', serif;color: white"><i class="fa-solid fa-link" style="color: white"></i> Useful links</p>
+           <p><i class="fa-solid fa-angle-right" style="color: white;"></i><a href="{% url 'activities' %}">Activities</a></p>
+           <p><i class="fa-solid fa-angle-right" style="color: white;"></i><a href="{% url 'contact' %}"> Contact us</a></p>
+        </div>
+
+        <div class="footer">
+            <p style="font-family: 'Merriweather', serif;color: white;"><i class="fa-solid fa-photo-film" style="color: white;"></i> Social media</p>
+            <div id="ikonat">
+            <div><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f fa-bounce" style="color: white;"></i></a></div>
+            <div><a href="https://www.instagram.com/"> <i class="fa-brands fa-instagram fa-bounce" style="color: white;"></i></a></div>
+            <div><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in fa-bounce" style="color: white"></i></a> </div>
+            <div><a href="https://twitter.com/"> <i class="fa-brands fa-twitter fa-bounce" style="color: white;"></i></a></div>
+            </div>
+        </div>
+
+      </div>
+    <div id="line"></div>
+   <div id="copyright"><p>Copyright Fit Royale</p></div>
+  </footer> 
